@@ -1,0 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("images/airplane-flying-and-leaving-heart-shape-dashed-line-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

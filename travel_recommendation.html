@@ -30,12 +30,32 @@
         <div id="search-results">
             <!-- search results go here -->
         </div>
+        <div id="time-zone">
+            <!-- time zone information goes here -->
+            <h3>Time Zone Information</h3>
+            <label for="time-zone-select">Select Time Zone:</label>
+            <select name="time-zone" id="time-zone-select">
+                <option value="LT">Local Time</option>
+                <option value="UTC">UTC</option>
+                <option value="" disabled>----</option>
+                <option value="Pacific/Honolulu">HST</option>
+                <option value="America/Phoenix">MST</option>
+                <option value="America/Cancun">EST</option>
+                <option value="America/Sao_Paulo">BRT</option>
+                <option value="Asia/Kolkata">IST</option>
+                <option value="Asia/Bangkok">ICT</option>
+                <option value="Asia/Tokyo">JST</option>
+                <option value="Australia/Sydney">AEST</option>
+            </select>
+            <p id="current-time"></p>
+            <p id="time-zone-info"></p>
+        </div>
     </main>
     <footer>
         <div>
             <img src="images/icons/facebook_icon.png" alt="Facebook">
             <img src="images/icons/instagram_icon.png" alt="Instagram">
-            <img src="images/icons/twitter-icon.png" alt=Twitter">
+            <img src="images/icons/twitter-icon.png" alt="Twitter">
             <img src="images/icons/youtube_icon.png" alt="YouTube">
         </div>
         <a href="#top">Go to Top</a>

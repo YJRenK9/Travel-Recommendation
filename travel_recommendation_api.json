@@ -168,7 +168,7 @@
     "biomes": [
       {
         "id": 1,
-        "name": "Foodimal Jungle, Cloudy with a Chance of Meatballs",
+        "name": "Foodimal Jungle, Swallow Falls",
         "imageUrl": "images/places/biomes/Foodimal-Jungle.webp",
         "description": "A lush, vibrant jungle in the Cloudy with a Chance of Meatballs universe, filled with exotic food-themed flora and fauna."
       },
@@ -176,7 +176,7 @@
         "id": 2,
         "name": "Mushroom Fields, Minecraft",
         "imageUrl": "images/places/biomes/Mushroom-Fields.png",
-        "description": "An extremely rare biome in the Minecraft universe, known for its vibrant mushroom growth, red mushroom cows (mooshrooms), and unique ecosystem."
+        "description": "An extremely rare biome in Minecraft, known for its vibrant mushroom growth, mooshrooms (red mushroom cows)."
       },
       {
         "id": 3,
@@ -198,9 +198,9 @@
       },
       {
         "id": 6,
-        "name": "Breakfast Bog, Cloudy with a Chance of Meatballs",
+        "name": "Breakfast Bog, Swallow Falls",
         "imageUrl": "images/places/biomes/BreakfastBog.webp",
-        "description": "A breakfast-themed bog in the Cloudy with a Chance of Meatballs universe. Its unique ecosystem is filled with pancake lilypads, syrup rivers, bacon trees, buttertoads, and mosquitoasts."
+        "description": "A breakfast-themed swamp known for its pancake lilypads, syrup rivers, bacon trees, buttertoads, and mosquitoasts."
       },
       {
         "id": 7,

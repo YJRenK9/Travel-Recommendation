@@ -6,4 +6,13 @@ body {
     background-image: url("images/airplane-flying-and-leaving-heart-shape-dashed-line-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }

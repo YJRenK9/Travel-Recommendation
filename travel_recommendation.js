@@ -38,8 +38,8 @@ fetch("travel_recommendation_api.json")
         console.log(placesNames);
 
         searchButton.addEventListener("click", () => {
-            // convert the search input to lowercase to make the search case-insensitive
-            var query = searchInput.value.toLowerCase();
+            // convert the search input to lowercase to make the search case-insensitive (use trim to remove surrounding whitespaces, or else an empty input will result in all the places listed)
+            var query = searchInput.value.toLowerCase().trim();
             // leave results blank for now
             var results;
             /*
@@ -77,8 +77,8 @@ fetch("travel_recommendation_api.json")
             // after the results have been determined, display them onto the webpage, if there are results to display, otherwise display a message indicating that no results were found, or that the search input cannot be empty
             searchResults.innerHTML = (results.length > 0) ? 
             results.map(item => `
-                <div>
-                    <img src="${item.imageUrl}" alt="${item.name}" style="width: 50%; height: auto;">
+                <div style="border: 1px solid #ccc; border-radius: 8px; padding: 16px; text-align: center; width: 300px;">
+                    <img src="${item.imageUrl}" alt="${item.name}" style="width: 300px; height: 200px; object-fit: cover;">
                     <h3>${item.name}</h3>
                     <p>${item.description}</p>
                 </div>

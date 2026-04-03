@@ -6,12 +6,12 @@
         "cities": [
           {
             "name": "Sydney, Australia",
-            "imageUrl": "images/places/Sydney.jpg",
+            "imageUrl": "images/places/cities/Sydney.jpg",
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
             "name": "Melbourne, Australia",
-            "imageUrl": "images/places/Melbourne.jpg",
+            "imageUrl": "images/places/cities/Melbourne.jpg",
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
           }
         ]
@@ -22,12 +22,12 @@
         "cities": [
           {
             "name": "Tokyo, Japan",
-            "imageUrl": "images/places/Tokyo.jpg",
+            "imageUrl": "images/places/cities/Tokyo.jpg",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "images/places/Kyoto.jpg",
+            "imageUrl": "images/places/cities/Kyoto.jpg",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
           }
         ]
@@ -38,13 +38,29 @@
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
-            "imageUrl": "images/places/Rio-de-Janeiro.jpg",
+            "imageUrl": "images/places/cities/Rio-de-Janeiro.jpg",
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
           },
           {
             "name": "São Paulo, Brazil",
-            "imageUrl": "images/places/Sao-Paulo.png",
+            "imageUrl": "images/places/cities/Sao-Paulo.png",
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "India",
+        "cities": [
+          {
+            "name": "Delhi, India",
+            "imageUrl": "images/places/cities/Delhi.jpg",
+            "description": "The capital city of India, known as the political and financial powerhouse of the country."
+          },
+          {
+            "name": "Kolkata, India",
+            "imageUrl": "images/places/cities/Kolkata.jpg",
+            "description": "West Bengal’s vibrant capital, celebrated for its history, street food, and rich heritage in the performing arts."
           }
         ]
       }
@@ -53,28 +69,150 @@
       {
         "id": 1,
         "name": "Angkor Wat, Cambodia",
-        "imageUrl": "images/places/Angkor-Wat.jpg",
+        "imageUrl": "images/places/temples/Angkor-Wat.jpg",
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
-        "imageUrl": "images/places/Taj-Mahal.jpg",
+        "imageUrl": "images/places/temples/Taj-Mahal.jpg",
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+      },
+      {
+        "id": 3,
+        "name": "Senso-ji, Japan",
+        "imageUrl": "images/places/temples/Senso-ji.jpg",
+        "description": "One of Japan's oldest and most revered Buddhist temples."
+      },
+      {
+        "id": 4,
+        "name": "Mangisa, Korea",
+        "imageUrl": "images/places/temples/Mangisa.jpg",
+        "description": "A historic temple in Korea known for its beautiful architecture and serene surroundings."
+      },
+      {
+        "id": 5,
+        "name": "Sri Harmandir Sahib, India",
+        "imageUrl": "images/places/temples/Sri-Harmandir-Sahib.jpg",
+        "description": "Also known as the Golden Temple, it is a significant spiritual site for Sikhs and a symbol of equality and brotherhood."
+      },
+      {
+        "id": 6,
+        "name": "Kinkaku-ji, Japan",
+        "imageUrl": "images/places/temples/Kinkaku-ji.jpg",
+        "description": "Also known as the Golden Pavilion, it is a Zen Buddhist temple in Kyoto, Japan, renowned for its stunning architecture and beautiful gardens."
+      },
+      {
+        "id": 7,
+        "name": "Jungle Temple, Minecraft",
+        "imageUrl": "images/places/temples/Jungle-Temple.png",
+        "description": "A mysterious structure found in the jungle biome, filled with traps and hidden treasures."
+      },
+      {
+        "id": 8,
+        "name": "Temple of Sinnoh, Pokémon",
+        "imageUrl": "images/places/temples/Temple-of-Sinnoh.png",
+        "description": "A sacred site in the Sinnoh region, known for its connection to legendary Pokémon and ancient mysteries."
       }
     ],
     "beaches": [
       {
         "id": 1,
         "name": "Bora Bora, French Polynesia",
-        "imageUrl": "images/places/Bora-Bora-Beach.jpg",
+        "imageUrl": "images/places/beaches/Bora-Bora-Beach.jpg",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
-        "imageUrl": "images/places/Copacabana-Beach.jpg",
+        "imageUrl": "images/places/beaches/Copacabana-Beach.jpg",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+      },
+      {
+        "id": 3,
+        "name": "Playa del Amor, Mexico",
+        "imageUrl": "images/places/beaches/Playa-del-Amor.jpg",
+        "description": "A hidden beach in Mexico known for its natural sunroof and crater shape."
+      },
+      {
+        "id": 4,
+        "name": "Waikiki Beach, Hawaii",
+        "imageUrl": "images/places/beaches/Waikiki-Beach.jpg",
+        "description": "A world-famous beach in Honolulu, Hawaii, known for its golden sand and vibrant atmosphere."
+      },
+      {
+        "id": 5,
+        "name": "La Vivienda Island, Panama",
+        "imageUrl": "images/places/beaches/La-Vivienda-Island.jpg",
+        "description": "A pristine island in Panama known for its untouched beaches and rich marine life."
+      },
+      {
+        "id": 6,
+        "name": "Grace Bay Beach, Turks & Caicos",
+        "imageUrl": "images/places/beaches/Grace-Bay-Beach.jpg",
+        "description": "A stunning beach in the Caribbean known for its powdery white sand and crystal-clear waters."
+      },
+      {
+        "id": 7,
+        "name": "Cheep Cheep Beach, Super Mario",
+        "imageUrl": "images/places/beaches/CheepCheepBeach.webp",
+        "description": "A vibrant beach in the Super Mario universe, known for its unique aquatic environment and exciting activities."
+      },
+      {
+        "id": 8,
+        "name": "Shallow Beach, Pokémon",
+        "imageUrl": "images/places/beaches/Shallow-Beach.jpg",
+        "description": "A serene beach in the Pokémon world, perfect for relaxing and enjoying the coastal scenery."
+      }
+    ],
+    "biomes": [
+      {
+        "id": 1,
+        "name": "Foodimal Jungle, Cloudy with a Chance of Meatballs",
+        "imageUrl": "images/places/biomes/Foodimal-Jungle.webp",
+        "description": "A lush, vibrant jungle in the Cloudy with a Chance of Meatballs universe, filled with exotic food-themed flora and fauna."
+      },
+      {
+        "id": 2,
+        "name": "Mushroom Fields, Minecraft",
+        "imageUrl": "images/places/biomes/Mushroom-Fields.png",
+        "description": "An extremely rare biome in the Minecraft universe, known for its vibrant mushroom growth, red mushroom cows (mooshrooms), and unique ecosystem."
+      },
+      {
+        "id": 3,
+        "name": "The Nether, Minecraft",
+        "imageUrl": "images/places/biomes/The-Nether.png",
+        "description": "A hostile dimension in the Minecraft universe, known for its lava-filled landscape and dangerous mobs."
+      },
+      {
+        "id": 4,
+        "name": "The End, Minecraft",
+        "imageUrl": "images/places/biomes/The-End.png",
+        "description": "A mysterious dimension in the Minecraft universe, home to the Ender Dragon and Endermen."
+      },
+      {
+        "id": 5,
+        "name": "The Aether, Minecraft",
+        "imageUrl": "images/places/biomes/The-Aether.png",
+        "description": "A mystical dimension in the Minecraft universe, known for its floating islands and heavenly creatures."
+      },
+      {
+        "id": 6,
+        "name": "Breakfast Bog, Cloudy with a Chance of Meatballs",
+        "imageUrl": "images/places/biomes/BreakfastBog.webp",
+        "description": "A breakfast-themed bog in the Cloudy with a Chance of Meatballs universe. Its unique ecosystem is filled with pancake lilypads, syrup rivers, bacon trees, buttertoads, and mosquitoasts."
+      },
+      {
+        "id": 7,
+        "name": "Cherry Grove, Minecraft",
+        "imageUrl": "images/places/biomes/Cherry-Grove.jpg",
+        "description": "A charming grove in the Minecraft universe, known for its vibrant cherry blossoms and peaceful atmosphere."
+      },
+      {
+        "id": 8,
+        "name": "Artic Tundra, North Pole",
+        "imageUrl": "images/places/biomes/Artic-Tundra.jpg",
+        "description": "A frozen desert at the Earth's northernmost point, known for its cold climate and wildlife."
       }
     ]
   }

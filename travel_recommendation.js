@@ -30,7 +30,8 @@ fetch("travel_recommendation_api.json")
         var placesArr = []
             .concat(data.countries.map(country => country.cities.map(city => city)).flat())
             .concat(data.temples.map(temple => temple))
-            .concat(data.beaches.map(beach => beach));
+            .concat(data.beaches.map(beach => beach))
+            .concat(data.biomes.map(biome => biome));
         console.log(placesArr);
         
         // make a new array of place names, which will be used to determine if the search query is a specific place name
@@ -51,7 +52,7 @@ fetch("travel_recommendation_api.json")
                 if the search query is a specific place name, then the results should be all the places that include that name in their name
                 otherwise, there are no results to display
             */
-            if (["country", "countries"].includes(query)) {
+            if (["country", "countries", "city", "cities"].includes(query)) {
                 results = data.countries.map(country => country.cities).flat();
             } else if (countriesArr.includes(query)) {
                 // since filter returns an array, we need to access the first element of the array to get the country object, then we can access the cities property of that object
@@ -61,6 +62,8 @@ fetch("travel_recommendation_api.json")
                 results = data.temples;
             } else if (["beach", "beaches"].includes(query)) {
                 results = data.beaches;
+            } else if (["biome", "biomes"].includes(query)) {
+                results = data.biomes;
             } else if (placesNames.some(name => name.includes(query))) {
                 // results = data.countries.reduce((acc, country) => {
                 //     var matchingCities = country.cities.filter(city => city.name.toLowerCase().split(',')[0].includes(query));

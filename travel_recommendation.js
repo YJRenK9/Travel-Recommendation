@@ -146,3 +146,10 @@ fetch("travel_recommendation_api.json")
         console.log(error);
         alert("An error occurred while fetching the data. Please try again later.");
     });
+
+// update the current time every second
+setInterval(() => {
+    var selectedTimezone = (timezoneSelect.value !== "LT") ? timezoneSelect.value : undefined;
+    var selectedTime = new Date().toLocaleTimeString("en-US", { timeZone: selectedTimezone });
+    currentTime.innerHTML = `Current Time: ${selectedTime}`;
+}, 1000);

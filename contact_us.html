@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendation</title>
+    <title>Travelopia - Contact Us</title>
     <link rel="stylesheet" href="travel_recommendation.css">
 </head>
 <body>
@@ -26,31 +26,61 @@
         </nav>  
     </header>
     <main>
-        <div>
-            <h1>Contact Us</h1>
-            <p>Keep in touch!</p>
-        </div>
-        <div>
-            <form action="submit">
-                <label for="">Name</label>
-                <input type="text" placeholder="Enter your name">
-                <label for="">Email</label>
-                <input type="email" placeholder="Enter your email">
-                <label for="">Message</label>
-                <textarea placeholder="Enter your message"></textarea>
+        <div id="contact-container">
+            <div>
+                <h1>Contact Us</h1>
+                <p>Need help with traveling plans? Want to work with us? </p>
+                <p><strong>Get in touch!</strong></p>
+            </div>
+                    <!-- <div id="contact-form-container"> -->
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
+        
+        <!-- </div> -->
     </main>
-    <footer>
-        <div>
-            <img src="images/icons/facebook_icon.png" alt="Facebook">
-            <img src="images/icons/instagram_icon.png" alt="Instagram">
-            <img src="images/icons/twitter-icon.png" alt=Twitter">
-            <img src="images/icons/youtube_icon.png" alt="YouTube">
-        </div>
-        <a href="#top">Go to Top</a>
+    <footer id="footer">
+        <img src="images/icons/facebook_icon.png" alt="Facebook">
+        <img src="images/icons/instagram_icon.png" alt="Instagram">
+        <img src="images/icons/twitter-icon.png" alt="Twitter">
+        <img src="images/icons/youtube_icon.png" alt="YouTube">
     </footer>
-    <script src="travel_recommendation.js"></script>
+    <script>
+        // Contact form submission handler
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // For demonstration, we'll just log the values to the console
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+            
+            // Clear the form after submission
+            this.reset();
+
+            // Information doesn't have to be real, just as long as you don't leave any fields blank. This is just a demonstration form, and no data will actually be collected.
+            if (!name || !email || !message) {
+                alert('Please fill out all fields before submitting.');
+                return;
+            }
+            
+            // Optionally, you can display a success message to the user
+            alert('Thank you for contacting us!');
+        });
+        // source: https://github.com/github-copilot/code_referencing?cursor=6d6b1547d1d6c7144181892949b0f067,865a311810a9965bda5934a31b09a5ac
+    </script>
 </body>
 </html>
+<!-- Disclaimer: Please do not post any sensitive information on this page, even though it won't be collected. -->

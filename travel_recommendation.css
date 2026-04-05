@@ -126,10 +126,10 @@ header > #navbar > span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     padding: 20px;
     /* margin-right: 90px; */
-    max-height: 380px;
+    max-height: 390px;
     overflow-y: auto;
     /* scrollbar-width:auto; */
     /* box-sizing: border-box; */
@@ -243,11 +243,17 @@ footer img:hover {
 
 #about-us {
     /* background-color: rgba(255, 255, 255, 0.8); */
-    padding: 40px 80px;
-    /* border-radius: 8px; */
-    max-width: 60%;
-    /* margin: 20vh auto 5vh; */
+    padding: 10px 80px 0;
+    border-radius: 8px;
+    max-width: 96ch;
+    text-align: justify;
+    line-height: 1.33;
+    /* margin: 1vh 5vh; */
     /* text-align: center; */
+}
+
+#about-us > p {
+    padding-left: 20px;   
 }
 
 #team {
@@ -348,4 +354,8 @@ footer img:hover {
 
 #contact-form button {
     align-self: flex-end;
+}
+
+#gold-text {
+    color: navy;
 }

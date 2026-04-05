@@ -2,33 +2,9 @@ var searchInput = document.getElementById("search-input");
 var searchButton = document.getElementById("search-button");
 var clearButton = document.getElementById("clear-button");
 var searchResults = document.getElementById("search-results");
+var resultsMessage = document.getElementById("results-message");
 
 var homeDiv = document.getElementById("home");
-
-var timezoneSelect = document.getElementById("time-zone-select");
-var timezoneInfo = document.getElementById("time-zone-info");
-var currentTime = document.getElementById("current-time");
-
-var timezonesMap = new Map();
-timezonesMap.set("LT", "Local Time");
-timezonesMap.set("UTC", "Coordinated Universal Time");
-timezonesMap.set("Pacific/Honolulu", "Hawaii Standard Time");
-timezonesMap.set("America/Phoenix", "Mountain Standard Time");
-timezonesMap.set("America/Cancun", "Eastern Standard Time");
-timezonesMap.set("America/Sao_Paulo", "Brasília Time");
-timezonesMap.set("Asia/Kolkata", "India Standard Time");
-timezonesMap.set("Asia/Bangkok", "Indochina Time");
-timezonesMap.set("Asia/Tokyo", "Japan Standard Time");
-timezonesMap.set("Australia/Sydney", "Australian Eastern Standard Time");
-
-var currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-console.log(currentTimezone);
-var selectedTime = new Date().toLocaleTimeString("en-US", { timeZone: currentTimezone });
-
-
-timezoneInfo.innerHTML = `${timezonesMap.get(timezoneSelect.value)}`;
-console.log(timezoneSelect.value);
-currentTime.innerHTML = `Current Time: ${selectedTime}`;
 
 fetch("travel_recommendation_api.json")
     .then(response => response.json())
@@ -103,53 +79,52 @@ fetch("travel_recommendation_api.json")
             }
 
             // after the results have been determined, display them onto the webpage, if there are results to display, otherwise display a message indicating that no results were found, or that the search input cannot be empty
-            searchResults.innerHTML = (results.length > 0) ? 
-            results.map(item => `
-                <div>
-                    <img src="${item.imageUrl}" alt="${item.name}" style="width: 300px; height: 200px; object-fit: cover;">
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                </div>
-            `).join("") 
-            : (query.length != "") ? 
-            "No results found! Please try a destination."
-            : "Search bar cannot be empty! Please enter a destination.";
+            if (results.length > 0) {
+                resultsMessage.innerHTML = `Search results for "<span id="navy-text">${query}</span>":`;
+                searchResults.innerHTML = results.map(item => `
+                    <div>
+                        <img src="${item.imageUrl}" alt="${item.name}" style="width: 300px; height: 200px; object-fit: cover;">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                `).join(""); 
+            } else if (query.length != 0) {
+                // make this empty because the results aren't found
+                searchResults.innerHTML = "";
+                // display this message if the search input isn't empty, but there are no results found for that search query
+                resultsMessage.innerHTML = "No results found! Please try a destination.";
+            } else {
+                // make this empty because the results aren't found
+                searchResults.innerHTML = "";
+                // display this message if the search input is empty
+                resultsMessage.innerHTML = "<p style='color: red;'>Search bar cannot be empty! Please enter a destination.</p>";
+            }
+            
+            
 
             // homeDiv.removeAttribute("visible");
             // homeDiv.setAttribute("visibility", "hidden");
 
             // hide the home div when search results are displayed
-            homeDiv.style.display = "none";
+            // homeDiv.style.display = "none";
         });
 
         // when user clicks on the clear button, clear the search input and the search results, and show the home div again
         clearButton.addEventListener("click", () => {
+            // clear the search input and the search results
             searchInput.value = "";
             searchResults.innerHTML = "";
+            // redisplay the original message
+            resultsMessage.innerHTML = "Use the search bar above to find your <span id=\"navy-text\">perfect</span> destination!";
 
             // homeDiv.removeAttribute("hidden");
             // homeDiv.setAttribute("visibility", "visible");
 
             //show the home div when the search results are cleared
-            homeDiv.style.display = "block";
-        });
-
-        // when the user selects a different timezone from the dropdown, update the selected time and the timezone information displayed on the webpage
-        timezoneSelect.addEventListener("change", () => {
-            var selectedTimezone = (timezoneSelect.value !== "LT") ? timezoneSelect.value : undefined;
-            var selectedTime = new Date().toLocaleTimeString("en-US", { timeZone: selectedTimezone });
-            currentTime.innerHTML = `Current Time: ${selectedTime}`;
-            timezoneInfo.innerHTML = `${(!selectedTimezone) ? "Local Time" : timezonesMap.get(selectedTimezone)}`;
+            // homeDiv.style.display = "block";
         });
     })
     .catch(error => {
         console.log(error);
         alert("An error occurred while fetching the data. Please try again later.");
     });
-
-// update the current time every second
-setInterval(() => {
-    var selectedTimezone = (timezoneSelect.value !== "LT") ? timezoneSelect.value : undefined;
-    var selectedTime = new Date().toLocaleTimeString("en-US", { timeZone: selectedTimezone });
-    currentTime.innerHTML = `Current Time: ${selectedTime}`;
-}, 1000);

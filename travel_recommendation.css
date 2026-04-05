@@ -1,12 +1,125 @@
+/* Reset default margins and padding, also ensures header/footer don't exceed container */
+* {
+   /* box-sizing: border-box;  */
+   /* margin: 0;
+   padding: 0; */
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
     background-image: url("images/airplane-flying-and-leaving-heart-shape-dashed-line-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-position: center; */
+    height: 100%;
+    z-index: 10;
+    /* used to ensure the main content takes up the remaining space */
+    flex: 1;  
+}
+
+main > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 40px 80px;
+    /* border-radius: 8px; */
+    /* max-width: 400px; */
+    /* margin: 20vh auto 5vh; */
+    /* text-align: center; */
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: lightblue;
+    transform: scale(1.05);
+    /* font-weight: bold; */
+}
+
+a:active {
+    color: gold;
+    transform: scale(0.95);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(0, 155, 255);
+}
+
+button:active {
+    background-color: rgb(0, 100, 200);
+}
+
+header {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; */
+    background-color: rgb(0, 50, 75);
+    /* width: 100%; */
+    /* box-sizing: border-box; */
+}
+
+header > #navbar > span {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: navy; */
+}
+
+#navbar h2 {
+    color: white;
+    /* margin: 0; */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
+#navbar input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+#home {
+    width: 50%;
+    /* margin: 20vh auto 5vh; */
 }
 
 #search-results {
@@ -15,4 +128,172 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    /* margin-right: 90px; */
+    max-height: 380px;
+    overflow-y: auto;
+    /* scrollbar-width:auto; */
+    /* box-sizing: border-box; */
+    scrollbar-color: #7f7f7f transparent; /* For Firefox */
+}
+
+#search-results::-webkit-scrollbar {
+    width: 8134px;
+}
+
+#search-results > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+#search-results > div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#time-zone {
+    /* position: relative; */
+    /* margin-left: 20%; */
+    /* position: absolute; */
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 275px;
+    padding: 20px;
+    margin-left: 80px;
+    border-radius: 8px;
+}
+
+#time-zone > select {
+    width: 50%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+#time-zone > select:hover {
+    border-color: #7f7f7f;
+}
+
+/* select > option{
+    transition: all 0.3s ease;
+}
+
+select > option:hover {
+    background-color: #f0f0f0;
+} */
+
+#time-zone-info {
+    /* position: absolute; */
+    /* margin-left: 5%; */
+}
+
+.scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+    /* rgb(196, 225, 239) */
+    background-color: rgb(195, 225, 235);
+    
+}
+
+footer img {
+    width: auto;
+    height: 30px;
+    cursor: pointer;
+}
+
+#go-to-top {
+    display: block;
+    position: fixed;
+    left: 80%;
+    bottom: 20px;
+    text-align: center;
+    margin: 20vh 0 5vh;
+    margin-inline: auto;
+    color: navy;
+    font-weight: bold;
+    background-color: turquoise;
+    border-radius: 8px;
+    width: 100px;
+    text-align: center
+    /* padding: 10px; */
+}
+
+#about-us {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 40px 80px;
+    /* border-radius: 8px; */
+    max-width: 60%;
+    /* margin: 20vh auto 5vh; */
+    /* text-align: center; */
+}
+
+#team {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#team-heading {
+    text-align: center;
+    margin: 40px 0 20px;
+    background-color: navy;
+    color: whitesmoke;
+    border-radius: 8px;
+    width: 275px;
+
+    font-size: 2rem;
+}
+
+#teamDiv {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#teamDiv > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+#teamDiv > div img {
+    width: 180px;
+    height: auto;
+    /* object-fit: cover; */
+    border-radius: 80px;
+}
+
+#teamDiv > div > span {
+    /* display: block; */
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: navy;
+    color: white;
+    border-radius: 40px;
+    padding: 5px 10px;
+    width: 50%;
+    margin-left: auto;
 }

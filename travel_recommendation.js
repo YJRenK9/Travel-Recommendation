@@ -105,7 +105,7 @@ fetch("travel_recommendation_api.json")
             // after the results have been determined, display them onto the webpage, if there are results to display, otherwise display a message indicating that no results were found, or that the search input cannot be empty
             searchResults.innerHTML = (results.length > 0) ? 
             results.map(item => `
-                <div style="border: 1px solid #ccc; border-radius: 8px; padding: 16px; text-align: center; width: 300px;">
+                <div>
                     <img src="${item.imageUrl}" alt="${item.name}" style="width: 300px; height: 200px; object-fit: cover;">
                     <h3>${item.name}</h3>
                     <p>${item.description}</p>
